@@ -15,11 +15,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollbutton : Button= findViewById(R.id.roll_button)
         rollbutton.setOnClickListener{
+            Toast.makeText(this,"button clicked!",Toast.LENGTH_SHORT).show()
             rollDice()
         }
     }
 
     private fun rollDice() {
+
         val diceimage: ImageView=findViewById(R.id.dice_image)
         val dis_text: TextView=findViewById(R.id.val_display)
         val randomInt =(1..6).random()
